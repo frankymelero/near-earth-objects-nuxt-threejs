@@ -5,7 +5,7 @@ const year = new Date().getFullYear();
 
 <template>
     <section class="footer">
-      {{ year }}  Developed by  <a href="https://github.com/frankymelero" target="_blank"> Franky Melero</a> | Data source: NASA's Sentinel
+      {{ year }}  Developed by  <a href="https://github.com/frankymelero" target="_blank"> Franky Melero</a> | Data source: NASA's Sentry
     </section>
 </template>
 
@@ -13,7 +13,7 @@ const year = new Date().getFullYear();
 
 .footer{
     position: absolute;
-    bottom: 5vh;
+    bottom: 3vh;
     width: 100vh;
     display: flex;
     justify-content: center;

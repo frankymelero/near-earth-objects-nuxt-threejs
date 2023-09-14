@@ -2,8 +2,8 @@
     <div class="starfield-container">
         <Starfield></Starfield>
       <div class="starfield-content">
-        <h1>NEO Collision Searcher</h1>
-        <h2 class="sub">See when a NEO can hit the earth</h2>
+        <h1>Objetos Próximos a la Tierra</h1>
+        <h2 class="sub">Consulta los asteroides rastreados por el programa Sentry de la Nasa</h2>
         <div class="starfield-form">
           <form ref="star-form" @submit.prevent="searchAsteroids" v-if="isComingFromDesPage">
             <input v-model="searchTerm" type="text" name="search" placeholder="Asteroid name...">
@@ -44,7 +44,7 @@
         </div>
         <button @click="start" class="btn-intro" v-if="!isComingFromDesPage">Empezar</button>
         <div class="starfield-content-wrapper" v-if="isComingFromDesPage">
-          <label for="results-per-page">Results per page: </label><select name="results-per-page" class="rpp" v-model="ipp" @change="changeItemsPerPage"><option value="25">25</option><option value="50">50</option><option value="75">75</option><option value="100">100</option></select>
+          <label for="results-per-page">Resultados por página: </label><select name="results-per-page" class="rpp" v-model="ipp" @change="changeItemsPerPage"><option value="25">25</option><option value="50">50</option><option value="75">75</option><option value="100">100</option></select>
           <div class="starfield-content-scroll">
             <div v-for="asteroid in currentPageAsteroids" :key="asteroid.id">
              <NuxtLink :to="'/'+asteroid.des"> <Asteroid :asteroid="asteroid" class="single-asteroid" /></NuxtLink>
@@ -56,8 +56,9 @@
       <button @click="nextPage" :disabled="currentPage === maxPages">Siguiente</button>
     </div>
         </div>
-       
+      
       </div>
+      <Footer></Footer>
     </div>
 
   </template>
@@ -262,6 +263,7 @@ let vals = localvalues.split('/');
   body {
     margin: 0; 
     overflow: hidden; 
+    font-family: helvetica, Verdana;
   }
   
   .starfield-container {
@@ -283,6 +285,7 @@ let vals = localvalues.split('/');
     z-index: 1;
     text-align: center;
     line-height: 0.4;
+    margin-top: -8vh;
   }
   
   h1{
@@ -291,6 +294,7 @@ let vals = localvalues.split('/');
   }
   h2.sub{
     font-size: 25px;
+    margin-bottom: 6vh;
   }
   
   .starfield-content-wrapper{
@@ -309,6 +313,8 @@ let vals = localvalues.split('/');
   }
   .rpp{
     margin-top: 1vh;
+    margin-bottom: -2vh;
+    height: 20px;
   }
  
   .btn-intro{
@@ -358,6 +364,13 @@ let vals = localvalues.split('/');
   }
   .single-asteroid{
     transition: 0.2s;
+  }
+  input[type=text]{
+    height: 28px;
+  }
+  select{
+    height: 34px;
+
   }
   </style>
   
