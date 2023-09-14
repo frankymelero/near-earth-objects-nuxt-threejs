@@ -2,5 +2,10 @@
 
 export default defineNuxtConfig({
  
+
+
+  // ... Otras configuraciones ...
+
+
   devtools: { enabled: true }
 })
