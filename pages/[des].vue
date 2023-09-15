@@ -119,7 +119,7 @@ const getData = async () => {
 try{
     const encodedDes = encodeURIComponent(des);
     console.log('Solicitando datos para', encodedDes); // Agrega este registro
-    const response = await fetch(`http://127.0.0.1:3001/?des=${encodedDes}`);
+    const response = await fetch(`https://proxy-express-deploy.vercel.app/?des=${encodedDes}`);
     console.log('Respuesta recibida:', response); // Agrega este registro
     const data = await response.json();
     
@@ -131,28 +131,23 @@ console.log("Error:", error);
 }
 
 
-onMounted(() => {
+onMounted(() => {  
     localStorage.setItem('isComingFromOtherPage', false); 
-    getData(); 
-  
-  
+    getData();
   });  
   const sortImpactsByDate = () => {
   asteroidImpacts.sort((a, b) => {
     // Divide las fechas en componentes
     const [yearA, monthA, dayA] = a.date.split('-').map(Number);
     const [yearB, monthB, dayB] = b.date.split('-').map(Number);
-
     // Compara primero por años
     if (yearA !== yearB) {
       return yearA - yearB;
     }
-
     // Si los años son iguales, compara por meses
     if (monthA !== monthB) {
       return monthA - monthB;
     }
-
     // Si los años y los meses son iguales, compara por días
     return dayA - dayB;
   });
@@ -173,7 +168,6 @@ const parseDate = (dateString) => {
 
   const processData = async (data) => {
 
-  
     asteroidSummary = {
     date: data.summary.date,
     last_obs: data.summary.last_obs,

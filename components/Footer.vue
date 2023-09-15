@@ -5,7 +5,7 @@ const year = new Date().getFullYear();
 
 <template>
     <section class="footer">
-      {{ year }}  Developed by  <a href="https://github.com/frankymelero" target="_blank"> Franky Melero</a> | Data source: NASA's Sentry
+      {{ year }}  Desarrollado por  <a href="https://github.com/frankymelero" target="_blank"> Franky Melero</a> | Fuente de datos: Sentry de la NASA.
     </section>
 </template>
 

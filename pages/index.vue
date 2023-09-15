@@ -6,37 +6,37 @@
         <h2 class="sub">Consulta los asteroides rastreados por el programa Sentry de la Nasa</h2>
         <div class="starfield-form">
           <form ref="star-form" @submit.prevent="searchAsteroids" v-if="isComingFromDesPage">
-            <input v-model="searchTerm" type="text" name="search" placeholder="Asteroid name...">
+            <input v-model="searchTerm" type="text" name="search" placeholder="Nombre del objeto...">
             <select v-model="sortBy" name="sortBy">
     
-              <option value="date">Sort by discovery date asc</option>
-              <option value="dateDesc">Sort by discovery date desc</option>
-              <option value="ip">Sort by impact probability asc</option>
-              <option value="ipDesc">Sort by impact probability desc</option>
-              <option value="pi">Sort by possible impacts asc</option>
-              <option value="piDesc">Sort by possible impacts desc</option>
-              <option value="diameter">Sort by diameter asc</option>
-              <option value="diameterDesc">Sort by diameter desc</option>
-              <option value="yearRange">Sort by year range asc</option>
-              <option value="yearRangeDesc">Sort by year range desc</option>
-              <option value="palermo">Sort by Palermo Scale asc</option> 
-              <option value="palermoDesc">Sort by Palermo Scale desc</option> 
+              <option value="date">Ordenar por fecha de descubrimiento asc.</option>
+              <option value="dateDesc">Ordenar por fecha de descubrimiento desc.</option>
+              <option value="ip">Ordenar por probabilidad de impacto asc.</option>
+              <option value="ipDesc">Ordenar por probabilidad de impacto desc.</option>
+              <option value="pi">Ordenar por posibles impactos asc.</option>
+              <option value="piDesc">Ordenar por posibles impactos desc.</option>
+              <option value="diameter">Ordenar por diametro asc.</option>
+              <option value="diameterDesc">Ordenar por diametro desc.</option>
+              <option value="yearRange">Ordernar por rango de años asc.</option>
+              <option value="yearRangeDesc">Ordenar por rango de años desc.</option>
+              <option value="palermo">Ordernar por escala Palermo asc.</option> 
+              <option value="palermoDesc">Ordenar por escala Palermo desc.</option> 
   
             </select>
             <select name="sortByPalermo" v-model="palermoFilter">
-      <option value="-12">Any Palermo Scale</option>
-      <option value="1">Palermo Scale +1</option>
-      <option value="0">Palermo Scale 0</option>
-      <option value="-1">Palermo Scale -1 or higher</option>
-      <option value="-2">Palermo Scale -2 or higher</option>
-      <option value="-3">Palermo Scale -3 or higher</option>
-      <option value="-4">Palermo Scale -4 or higher</option>
-      <option value="-5">Palermo Scale -5 or higher</option>
-      <option value="-6">Palermo Scale -6 or higher</option>
-      <option value="-7">Palermo Scale -7 or higher</option>
-      <option value="-8">Palermo Scale -8 or higher</option>
-      <option value="-9">Palermo Scale -9 or higher</option>
-      <option value="-10">Palermo Scale -10 or higher</option>
+      <option value="-12">Todos los valores</option>
+      <option value="1">Escala de palermo 1 o +</option>
+      <option value="0">Escala de palermo 0 o +</option>
+      <option value="-1">Escala de palermo -1 o +</option>
+      <option value="-2">Escala de palermo -2 o +</option>
+      <option value="-3">Escala de palermo -3 o +</option>
+      <option value="-4">Escala de palermo -4 o +</option>
+      <option value="-5">Escala de palermo -5 o +</option>
+      <option value="-6">Escala de palermo -6 o +</option>
+      <option value="-7">Escala de palermo -7 o +</option>
+      <option value="-8">Escala de palermo -8 o +</option>
+      <option value="-9">Escala de palermo -9 o +</option>
+      <option value="-10">Escala de palermo -10 o +</option>
     </select>
            
           </form>
