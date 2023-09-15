@@ -41,13 +41,13 @@
   function calculateImage(diametroAsteroide){
     let imagenUrl;
   if(diametroAsteroide >= 0.5){
-    imagenUrl = "_nuxt/public/assets/img/asteroid2.png"
+    imagenUrl = "/assets/img/asteroid2.png"
   } else if (diametroAsteroide < 0.5 && diametroAsteroide >= 0.01){
-    imagenUrl = "_nuxt/public/assets/img/asteroid3.png"
+    imagenUrl = "/assets/img/asteroid3.png"
   } else if (diametroAsteroide < 0.01 && diametroAsteroide >=0.005){
-    imagenUrl = "_nuxt/public/assets/img/asteroid1.png"
+    imagenUrl = "/assets/img/asteroid1.png"
   }else{
-    imagenUrl = "_nuxt/public/assets/img/asteroid4.png"
+    imagenUrl = "/assets/img/asteroid4.png"
   }
 
   return imagenUrl;
