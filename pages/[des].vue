@@ -39,29 +39,7 @@
 
 
         </div>
-        <!-- date: data.summary.date,
-    last_obs: data.summary.last_obs,
-    mass: data.summary.mass,
-    nsat: data.summary.nsat,
-    method: data.summary.method,
-    cdate: data.summary.cdate,
-    nobs: data.summary.nobs,
-    first_obs: data.summary.first_obs,
-    ndop: data.summary.ndop,
-    diameter: data.summary.diameter,
-    darc: data.summary.darc,
-    ps_max: data.summary.ps_max,
-    h: data.summary.h,
-    ip:data.summary.ip,
-    ndel: data.summary.ndel,
-    des: data.summary.des,
-    n_imp: data.summary.n_imp,
-    v_inf: data.summary.v_inf,
-    fullname: data.summary.fullname,
-    v_imp: data.summary.v_imp,
-    ps_cum: data.summary.ps_cum,
-    ts_max: data.summary.ts_max,
-    energy: data.summary.energy*/-->  
+   
       </div>
       <h2>Posibles impactos: {{ asteroidImpacts.length }}</h2>
       <div class="asteroid-wrapper">
