@@ -372,5 +372,27 @@ let vals = localvalues.split('/');
     height: 34px;
 
   }
+
+  @media (max-width: 1200px){
+    .starfield-content{
+      line-height: 1;
+    }
+    section.footer{
+      font-size: 17px;
+text-align: center;
+    display: unset !important;
+    width: 90vw !important;
+    }
+    .starfield-content-wrapper{
+      width: unset !important;
+      border-radius: 0px;
+    }
+    h1{
+      font-size: 28px;
+    }
+    h2.sub{
+      font-size: 16px;
+    }
+  }
   </style>
   

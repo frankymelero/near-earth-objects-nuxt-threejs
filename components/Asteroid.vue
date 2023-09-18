@@ -117,5 +117,29 @@ tr{
 .second-row{
     margin-top: 25px;
 }
+@media (max-width: 1200px){
+  
 
+    b.item{
+      font-size: 15px !important;
+    }
+    td, th{
+      font-size: 15px !important;
+      height: 10vh;
+      overflow: hidden;
+    }
+    h2.fullname{
+      font-size: 20px !important;
+      margin-bottom: 2vh;
+    }
+    .asteroid-description{
+      width: unset;
+    }
+    .asteroid-img{
+display: none;
+    }
+   .asteroid{
+    height: unset;
+   }
+  }
 </style>
