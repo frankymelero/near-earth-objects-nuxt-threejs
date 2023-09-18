@@ -386,6 +386,7 @@ text-align: center;
     .starfield-content-wrapper{
       width: unset !important;
       border-radius: 0px;
+      margin-top:15px;
     }
     h1{
       font-size: 28px;
@@ -395,6 +396,9 @@ text-align: center;
     }
     .starfield-form{
       margin-top: -5vh !important;
+    }
+    .footer{
+      bottom: 5vh;
     }
   }
   </style>
