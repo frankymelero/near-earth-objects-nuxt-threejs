@@ -141,5 +141,6 @@ display: none;
    .asteroid{
     height: unset;
    }
+
   }
 </style>
