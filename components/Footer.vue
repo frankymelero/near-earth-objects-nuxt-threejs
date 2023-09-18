@@ -27,4 +27,10 @@ const year = new Date().getFullYear();
     margin-right:4px;
     font-size: large;
 }
+
+@media (max-width: 1200px){
+.footer{
+    bottom: 5vh;
+}
+}
 </style>
