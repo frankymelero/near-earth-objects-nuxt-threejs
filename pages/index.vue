@@ -397,9 +397,7 @@ text-align: center;
     .starfield-form{
       margin-top: -5vh !important;
     }
-    .footer{
-      bottom: 5vh;
-    }
+  
   }
   </style>
   

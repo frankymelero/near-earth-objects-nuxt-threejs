@@ -7,36 +7,18 @@
 <div v-else>
     <div class="asteroid-data-content">
         <div class="asteroid-summary-data">
-
-<p class="celda bolder">Escala de Torino </p>
-<p class="celda bolder">Escala de Palermo (cumulativa) </p>
-<p class="celda bolder ">Escala de Palermo <br>  (max)</p>
-<p class="celda bolder">Probabilidad de impacto (cum.)</p>
-<p class="celda bolder">Última observación</p>
-<p class="celda bolder">Método de localización</p>
-<p class="celda">{{ asteroidSummary.ts_max }}</p>
-<p class="celda">{{ asteroidSummary.ps_cum }}</p>
-<p class="celda">{{ asteroidSummary.ps_max }}</p>
-<p class="celda">{{ asteroidSummary.ip }}</p>
-<p class="celda">{{ asteroidSummary.last_obs }}</p>
-<p class="celda">{{ asteroidSummary.method }}</p> 
-
-<p class="celda bolder">Velocidad de impacto (km/s)</p>
-<p class="celda bolder">Velocidad del infinito (km/s)</p>
-<p class="celda bolder">Diametro <br>(km)</p>
-<p class="celda bolder">Masa <br>(kg)</p>
-<p class="celda bolder">Energía <br>(Mt)</p>
-<p class="celda bolder">Próxima aproximación<br>estimada</p>
-
-
-
-<p class="celda ultima">{{ asteroidSummary.v_imp }}</p>
-<p class="celda ultima">{{ asteroidSummary.v_inf }}</p>
-<p class="celda ultima">{{ asteroidSummary.diameter }}</p>
-<p class="celda ultima">{{ asteroidSummary.mass }}</p>
-<p class="celda ultima">{{ asteroidSummary.energy }}</p>
-<p class="celda ultima">{{ asteroidImpacts[0].date.substring(0,10) }}</p>
-
+<div class="singleinfo"><p class="celda bolder">Escala de Torino </p><p class="celda">{{ asteroidSummary.ts_max }}</p></div>
+<div class="singleinfo"><p class="celda bolder">Escala de Palermo (cumulativa) </p><p class="celda">{{ asteroidSummary.ps_cum }}</p></div>
+<div class="singleinfo"><p class="celda bolder ">Escala de Palermo <br>  (max)</p><p class="celda">{{ asteroidSummary.ps_max }}</p></div>
+<div class="singleinfo"><p class="celda bolder">Probabilidad de impacto (cum.)</p><p class="celda">{{ asteroidSummary.ip }}</p></div>
+<div class="singleinfo"><p class="celda bolder">Última observación</p><p class="celda">{{ asteroidSummary.last_obs }}</p></div>
+<div class="singleinfo"><p class="celda bolder">Método de localización</p><p class="celda">{{ asteroidSummary.method }}</p></div>
+<div class="singleinfo"><p class="celda bolder">Velocidad de impacto (km/s)</p><p class="celda ultima">{{ asteroidSummary.v_imp }}</p> </div>
+<div class="singleinfo"><p class="celda bolder">Velocidad del infinito (km/s)</p><p class="celda ultima">{{ asteroidSummary.v_inf }}</p></div>
+<div class="singleinfo"><p class="celda bolder">Diametro <br>(km)</p><p class="celda ultima">{{ asteroidSummary.diameter }}</p></div>
+<div class="singleinfo"><p class="celda bolder">Masa <br>(kg)</p><p class="celda ultima">{{ asteroidSummary.mass }}</p></div>
+<div class="singleinfo"><p class="celda bolder">Energía <br>(Mt)</p><p class="celda ultima">{{ asteroidSummary.energy }}</p></div>
+<div class="singleinfo"><p class="celda bolder">Próxima aproximación<br>estimada</p><p class="celda ultima">{{ asteroidImpacts[0].date.substring(0,10) }}</p></div>
 
         </div>
    
@@ -45,7 +27,7 @@
       <div class="asteroid-wrapper">
   
       <div class="asteroid-impacts-data">
-       
+       <div class="table-container">
         <table>
             <th>Fecha</th>
             <th>Sigma VI</th>
@@ -67,6 +49,7 @@
           <!-- Agrega otros campos de impacto que desees mostrar -->
         </tr>
         </table>
+      </div>
         <Footer></Footer>
     </div>
 
@@ -234,7 +217,9 @@ th:nth-child(0){
 }
 h2{text-align: center;}
 h1{
-  margin-top: 0vh;
+  margin-top: -3vh;
+  font-size: 40px;
+  margin-bottom: 6vh;
 }
 
 .btn-back{
@@ -255,24 +240,21 @@ h1{
     background-color: rgba(255,255,255,0.7);
 }
 .asteroid-summary-data{
-  display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    place-items: center;
-
-}
-.celda {
-    padding: 10px;
-
-    text-align: center;
-
-min-width: 8vw;
+  display: flex;
 justify-content: center;
-font-size: 25px;
-grid-gap:0;
-
-max-height: 0.3vh;
+align-items: center;
+flex-wrap: wrap;
 
 }
+.singleinfo{
+  width: 15vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size:25px;
+}
+
 .bolder{
   
   font-size: 25px;
@@ -285,7 +267,58 @@ max-height: 0.3vh;
   overflow-x: hidden;
   
 }
+
 .ultima{
-  padding-bottom:3vh;
+  padding-bottom:0vh;
 }
-</style>
+p.celda{
+text-align: center;
+}
+@media (max-width: 1200px){
+.bolder{
+  font-size: 13px;
+}
+p.celda{
+  font-size:15px;
+}
+
+h1{
+  font-size: 31px;
+  text-align: center;
+  margin-top: -10vh;
+  
+}
+h2{
+  font-size: 18px;
+}
+.asteroid-wrapper{
+  max-height: 17vh;
+}
+.asteroid-data-content{
+  overflow-x: scroll;
+}
+.asteroid-summary-data {
+    display: flex;
+  width: 200%;
+
+  }
+  .asteroid-summary-container {
+    width: 100%; /* Asegúrate de que el contenedor ocupe todo el ancho disponible */
+    overflow-x: auto; /* Cambiamos de 'hidden' a 'auto' */
+  }
+
+  .singleinfo {
+    width: 33vw;
+    flex-shrink: 0; /* Evita que los elementos se reduzcan más allá de 33vw */
+  }
+tr > td{
+min-width: unset;
+}
+th{
+  font-size: 10px;
+}
+table{
+  margin-top: -1vh;
+}
+}
+</style>  
