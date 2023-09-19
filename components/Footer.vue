@@ -30,7 +30,7 @@ const year = new Date().getFullYear();
 
 @media (max-width: 1200px){
 .footer{
-    bottom: 5vh;
+    bottom: 8vh;
 }
 }
 </style>
