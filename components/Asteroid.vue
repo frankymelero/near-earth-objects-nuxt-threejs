@@ -9,7 +9,7 @@
         <tr>
             <td><b class="item">Diametro</b> <br>{{ asteroid.diameter }} km</td>
       <td><b class="item">Rango de años</b> <br>{{ asteroid.range }}</td>
-      <td><b class="item">Velocidad inf</b><br> {{ asteroid.v_inf }}</td>
+      <td><b class="item">Velocidad inf</b><br> {{ asteroid.v_inf }}km/s</td>
       <td><b class="item">Probab. impacto<br></b> {{ asteroid.ip }}</td>
         </tr>
         <tr class="second-row">
